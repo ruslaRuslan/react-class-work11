@@ -5,6 +5,7 @@ import Contact from "../page/Contact/";
 import UsersWithStatePage from "../page/UsersWithStatePage";
 import UsersWithReducerPage from "../page/UsersWithReducerState";
 import ProductsPage from "../page/Products";
+import ReduxPage from "../page/Redux";
 
 const Routing = () => {
   return (
@@ -16,6 +17,8 @@ const Routing = () => {
         <Route path="/users-state" element={<UsersWithStatePage />} />
         <Route path="/users-reducer" element={<UsersWithReducerPage />} />
         <Route path="/products" element={<ProductsPage />} />
+        <Route path="/redux" element={<ReduxPage />} />
+
 
       </Routes>
     </>
