@@ -4,8 +4,9 @@ import App from "./App.jsx";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import { createStore } from "redux";
+import reducer from "./reducers/usersReducer.js";
 
-ReactDOM.createRoot(document.getElementById("root"));
+const rootElement = ReactDOM.createRoot(document.getElementById("root"));
 
 
 
@@ -13,7 +14,8 @@ ReactDOM.createRoot(document.getElementById("root"));
 
 const store = createStore(reducer);
 // deprecated - kohnelmis
-createRoutesFromElements.render(
+
+rootElement.render(
   <BrowserRouter>
     <Provider store={store}>
       <App />
