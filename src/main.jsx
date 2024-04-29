@@ -3,19 +3,15 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
-import { createStore } from "redux";
 import reducer from "./reducers/usersReducer.js";
+import { createStore } from "redux";
 
-const rootElement = ReactDOM.createRoot(document.getElementById("root"));
-
-
-
-
+const rootElem = ReactDOM.createRoot(document.getElementById("root"));
 
 const store = createStore(reducer);
 // deprecated - kohnelmis
 
-rootElement.render(
+rootElem.render(
   <BrowserRouter>
     <Provider store={store}>
       <App />
